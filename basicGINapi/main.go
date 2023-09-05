@@ -99,7 +99,6 @@ func getAllPlayers(c *gin.Context) {
 func main() {
 	r := gin.Default()
 
-	// Sample data
 	players = append(players, player{ID: nextID, Name: "Seth", Team: "MI", Score: 88})
 	nextID++
 	players = append(players, player{ID: nextID, Name: "Yash", Team: "CSK", Score: 100})
