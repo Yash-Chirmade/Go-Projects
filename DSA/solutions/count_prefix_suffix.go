@@ -36,7 +36,6 @@ func IsPrefixAndSuffix(p, word string) bool {
 	if len(p) > len(word) {
 		return false
 	}
-	//check equality
 	if word[(len(word)-len(p)):] == p && word[:len(p)] == p {
 		return true
 	}
