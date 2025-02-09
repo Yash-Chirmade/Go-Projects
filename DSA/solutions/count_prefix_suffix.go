@@ -24,7 +24,7 @@ func CountPrefixSuffix(words []string) int {
 
 	for i, word := range words {
 		for j := (len(words) - 1); j > i; j-- {
-			if IsPrefixAndSuffix(word, words[j]) {
+			if isPrefixAndSuffix(word, words[j]) {
 				Counter++
 			}
 		}
@@ -32,7 +32,7 @@ func CountPrefixSuffix(words []string) int {
 	return Counter
 }
 
-func IsPrefixAndSuffix(p, word string) bool {
+func isPrefixAndSuffix(p, word string) bool {
 	if len(p) > len(word) {
 		return false
 	}
