@@ -17,9 +17,9 @@ func main() {
 	// log.Printf("array result is %v", count)
 
 	nums := []int{0,0,1,1,1,2,2,3,3,4}
-	// target:= 6
+	target:= 1
 	// result := solution.TwoSum(nums,target)
-	k := solution.RemoveDuplicates(nums)
+	k := solution.RemoveElement(nums,target)
 	log.Printf("Result is %v ", k)
 
 }
