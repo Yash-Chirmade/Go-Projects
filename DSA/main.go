@@ -16,10 +16,13 @@ func main() {
 	// count := solution.FindWords(wordsNext)
 	// log.Printf("array result is %v", count)
 
-	nums := []int{0,0,1,1,1,2,2,3,3,4}
-	target:= 1
-	// result := solution.TwoSum(nums,target)
-	k := solution.RemoveElement(nums,target)
+	// nums := []int{0,0,1,1,1,2,2,3,3,4}
+	// target:= 1
+	// // result := solution.TwoSum(nums,target)
+	// k := solution.RemoveElement(nums,target)
+
+	nums := []int{0,0,1,1,1}
+	k := solution.MajorityElement(nums)
 	log.Printf("Result is %v ", k)
 
 }
