@@ -33,8 +33,12 @@ func main() {
 	// solution.MoveZeroes(numbers)
 	// log.Printf("Rotated Array is %v ", arr)
 
-	checkMissing := []int{0,1}
-	n:=solution.MissingNumber(checkMissing)
-	log.Printf("Missing Number is %v ", n)
+	// checkMissing := []int{0,1}
+	// n:=solution.MissingNumber(checkMissing)
+	// log.Printf("Missing Number is %v ", n)
+
+	conOnes := []int{1,0,1,1,0,1}
+	n:=solution.FindMaxConsecutiveOnes(conOnes)
+	log.Printf("Number of ones is %v ", n)
 
 }
