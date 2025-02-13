@@ -2,6 +2,7 @@ package main
 
 import (
 	solution "dsa/prep/solutions"
+	"log"
 )
 
 func main() {
@@ -27,8 +28,13 @@ func main() {
 	// s := solution.SecondLargestOfArray(nums)
 	// log.Printf("Second Max is %v ", s)
 
-	numbers := []int{1, 0, 3, 4, 0, 6, 0}
-	// k := 3
-	solution.MoveZeroes(numbers)
+	// numbers := []int{1, 0, 3, 4, 0, 6, 0}
+	// // k := 3
+	// solution.MoveZeroes(numbers)
 	// log.Printf("Rotated Array is %v ", arr)
+
+	checkMissing := []int{0,1}
+	n:=solution.MissingNumber(checkMissing)
+	log.Printf("Missing Number is %v ", n)
+
 }
