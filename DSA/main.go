@@ -37,8 +37,11 @@ func main() {
 	// n:=solution.MissingNumber(checkMissing)
 	// log.Printf("Missing Number is %v ", n)
 
-	conOnes := []int{1,0,1,1,0,1}
-	n:=solution.FindMaxConsecutiveOnes(conOnes)
-	log.Printf("Number of ones is %v ", n)
+	// conOnes := []int{1,0,1,1,0,1}
+	// n:=solution.FindMaxConsecutiveOnes(conOnes)
+	// log.Printf("Number of ones is %v ", n)
 
+	numbers := []int{0,1,1,1}
+	n:=solution.SingleNumber(numbers)
+	log.Printf("Single Number is %v ", n)
 }
