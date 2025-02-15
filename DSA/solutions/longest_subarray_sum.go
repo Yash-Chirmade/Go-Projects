@@ -14,7 +14,7 @@ package solution
 // [1, 2], [3], [1, 1, 1] and [1, 1, 1]
 // Here, the length of the longest subarray is 3, which is our final answer.
 
-func LongestSubarrayWithSum(nums []int, requiredSum int) int {
+func longestSubarrayWithSumK(nums []int, requiredSum int) int {
 	n := len(nums)
 	var sum, longestSubarraylength int
 	for i, _ := range nums {
@@ -35,4 +35,36 @@ func LongestSubarrayWithSum(nums []int, requiredSum int) int {
 	}
 	return longestSubarraylength
 
+}
+
+// Prefix Sum Hashing approach 
+func LongestSubarrayWithSum(a []int, k int) int {
+	prefixSum := make(map[int]int)
+	sum := 0
+	maxLen := 0
+
+	for i, num := range a {
+		sum += num
+
+		if sum == k {
+			maxLen = i + 1
+		}
+
+		if _, found := prefixSum[sum-k]; found {
+			maxLen = max(maxLen, i-prefixSum[sum-k])
+		}
+
+		if _, exists := prefixSum[sum]; !exists {
+			prefixSum[sum] = i
+		}
+	}
+
+	return maxLen
+}
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
 }
