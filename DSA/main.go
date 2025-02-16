@@ -79,8 +79,11 @@ func main() {
 		}
 	}
 
-	colors := []int{0,0,1,2,1}
-	solution.SortColors(colors)
-	log.Print(colors)
+	// colors := []int{0,0,1,2,1}
+	// solution.SortColors(colors)
+	// log.Print(colors)
 
+	Arr := []int{5,4,-1,7,8}
+	maxSum:=solution.MaxSubArray(Arr)
+	log.Printf("Maximum sum is : %d" , maxSum)
 }
