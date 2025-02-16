@@ -3,6 +3,7 @@ package main
 import (
 	solution "dsa/prep/solutions"
 	"fmt"
+	"log"
 	"reflect"
 )
 
@@ -77,4 +78,9 @@ func main() {
 			fmt.Printf("✅ Test %d passed!\n", i+1)
 		}
 	}
+
+	colors := []int{0,0,1,2,1}
+	solution.SortColors(colors)
+	log.Print(colors)
+
 }
