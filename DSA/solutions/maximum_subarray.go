@@ -1,5 +1,6 @@
 package solution
 
+//kadane's algorithm
 // 53. Maximum Subarray
 // Given an integer array nums, find the
 // subarray
@@ -17,6 +18,19 @@ func MaxSubArray(nums []int) int {
 		maxCurrent = max(nums[i], maxCurrent+nums[i])
 		if maxGlobal < maxCurrent {
 			maxGlobal = maxCurrent
+		}
+	}
+	return maxGlobal
+}
+//5,-4,0,7,8
+func MaxSubArrayKadanes(nums []int) int {
+	maxGlobal := 0
+	sum := 0
+	for i := 0; i <= len(nums)-1; i++ {
+		sum += nums[i]
+		maxGlobal = max(sum, maxGlobal)
+		if sum < 0 {
+			sum = 0
 		}
 	}
 	return maxGlobal

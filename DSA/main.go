@@ -83,7 +83,7 @@ func main() {
 	// solution.SortColors(colors)
 	// log.Print(colors)
 
-	Arr := []int{5,4,-1,7,8}
-	maxSum:=solution.MaxSubArray(Arr)
+	Arr := []int{5,-4,0,7,8}
+	maxSum:=solution.MaxSubArrayKadanes(Arr)
 	log.Printf("Maximum sum is : %d" , maxSum)
 }
