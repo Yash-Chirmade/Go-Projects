@@ -84,7 +84,12 @@ func main() {
 	// maxSum:=solution.MaxSubArrayKadanes(Arr)
 	// log.Printf("Maximum sum is : %d" , maxSum)
 
-	Arr := []int{7, 1, 5, 3, 6, 4}
-	maxSum := solution.MaxProfit(Arr)
-	log.Printf("Maximum profit is : %d", maxSum)
+	// Arr := []int{7, 1, 5, 3, 6, 4}
+	// maxSum := solution.MaxProfit(Arr)
+	// log.Printf("Maximum profit is : %d", maxSum)
+
+
+	Arr := []int{3,1,-2,-5,2,-4}
+	array := solution.RearrangeArray(Arr)
+	log.Printf("rearranged array is : %v", array)
 }
