@@ -40,22 +40,24 @@ func longestSubarrayWithSumK(nums []int, requiredSum int) int {
 // Prefix Sum Hashing approach 
 func LongestSubarrayWithSum(a []int, k int) int {
 	prefixSum := make(map[int]int)
-	sum := 0
+	currentSum := 0
 	maxLen := 0
 
 	for i, num := range a {
-		sum += num
+		currentSum += num
 
-		if sum == k {
+		if currentSum == k {
 			maxLen = i + 1
 		}
-
-		if _, found := prefixSum[sum-k]; found {
-			maxLen = max(maxLen, i-prefixSum[sum-k])
+		//substracting k from currentSum and checking if it is present in the map 
+		//means if the result is present in the map means the k is also present
+		if _, found := prefixSum[currentSum-k]; found {
+			maxLen = max(maxLen, i-prefixSum[currentSum-k])
 		}
 
-		if _, exists := prefixSum[sum]; !exists {
-			prefixSum[sum] = i
+		// adding the currentSum to the map
+		if _, exists := prefixSum[currentSum]; !exists {
+			prefixSum[currentSum] = i
 		}
 	}
 
