@@ -89,7 +89,14 @@ func main() {
 	// log.Printf("Maximum profit is : %d", maxSum)
 
 
-	Arr := []int{3,1,-2,-5,2,-4}
-	array := solution.RearrangeArray(Arr)
-	log.Printf("rearranged array is : %v", array)
+	// Arr := []int{3,1,-2,-5,2,-4}
+	// array := solution.RearrangeArray(Arr)
+	// log.Printf("rearranged array is : %v", array)
+
+
+	
+	arr := []int{-1,1}
+	result := solution.ReplaceElements(arr)
+
+	log.Printf("rearranged array is : %v", result)
 }
